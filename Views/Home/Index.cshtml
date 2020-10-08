@@ -1,0 +1,48 @@
+﻿@using TestZL.Models.ViewModel;
+@inject TestZL.Services.Interfaces.ILoadItemService  LoadItemService
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h4>Загрузка данных</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md">
+            @*<partial name="_LoadItemPartial.cshtml" />*@
+            @await Html.PartialAsync("LoadItemPartial.cshtml", new LoadItemViewModel())
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Наименование</th>
+                        <th scope="col">Дата создания</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var items in await LoadItemService.GetAllAsync())
+                    {
+                    <tr>
+                        <td>@items.Name</td>
+                        <td>@items.DateCreation</td>
+                    </tr>
+
+
+                    }
+                </tbody>
+            </table>
+
+
+            @*<partial name="_LoadItemPartial.cshtml" />*@
+
+        </div>
+    </div>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+

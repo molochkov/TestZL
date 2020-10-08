@@ -1,0 +1,281 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TestZL</name>
+    </assembly>
+    <members>
+        <member name="P:TestZL.DAL.TestZLContext.LocationMarkups">
+            <summary>
+            Справочник Расположение разметки
+            </summary>
+        </member>
+        <member name="P:TestZL.DAL.TestZLContext.LoadItems">
+            <summary>
+            Таблица элементов загрузки
+            </summary>
+        </member>
+        <member name="M:TestZL.Helpers.ConfigurationHelper.MinFilesInZip">
+            <summary>
+            Получить минимальное значение файлов в архиве
+            </summary>     
+        </member>
+        <member name="M:TestZL.Helpers.ConfigurationHelper.MaxFilesInZip">
+            <summary>
+            Получить Максимальное значение файлов в архиве
+            </summary>     
+        </member>
+        <member name="M:TestZL.Helpers.ConfigurationHelper.UpLimit">
+            <summary>
+            Получить шаг увеличения границ кол-во файлов
+            </summary>     
+        </member>
+        <member name="M:TestZL.Helpers.ConfigurationHelper.AnswerFileName">
+            <summary>
+            Имя файла с ответами
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TestZL.Helpers.ConfigurationHelper.AllowImageFormat">
+            <summary>
+            Допустимые графические форматы
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TestZL.Helpers.ConfigurationHelper.SynAnswerInSeparateFile">
+            <summary>
+            Синомим в справочнике - расположение разметки в отдельном файле
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TestZL.Helpers.ConfigurationHelper.FolderNameforValidFile">
+            <summary>
+            Папка для валидных архивов
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:TestZL.Models.Database.LoadItem.Name">
+            <summary>
+            Имя
+            </summary>
+        </member>
+        <member name="P:TestZL.Models.Database.LoadItem.DateCreation">
+            <summary>
+            Дата создания
+            </summary>
+        </member>
+        <member name="P:TestZL.Models.Database.LoadItem.IsContainsCyrillic">
+            <summary>
+            Содержит кириллицу
+            </summary>
+        </member>
+        <member name="P:TestZL.Models.Database.LoadItem.IsContainsLatin">
+            <summary>
+            Содержит латиницу
+            </summary>
+        </member>
+        <member name="P:TestZL.Models.Database.LoadItem.IsContainsDigits">
+            <summary>
+            Содержит цифры
+            </summary>
+        </member>
+        <member name="P:TestZL.Models.Database.LoadItem.IsContainsSpecialChars">
+            <summary>
+            содержит специальные символы
+            </summary>
+        </member>
+        <member name="P:TestZL.Models.Database.LoadItem.IsCaseSensitivity">
+            <summary>
+            Чувствительность к регистру
+            </summary>
+        </member>
+        <member name="P:TestZL.Models.Database.LoadItem.Markup">
+            <summary>
+            Расположение разметки
+            </summary>
+        </member>
+        <member name="P:TestZL.Models.Database.LoadItem.LocalPathToFile">
+            <summary>
+            локальный путь к файлу
+            </summary>
+        </member>
+        <member name="P:TestZL.Models.Database.LoadItem.FileName">
+            <summary>
+            Название файла
+            </summary>
+        </member>
+        <member name="P:TestZL.Models.Database.LocationMarkup.Name">
+            <summary>
+            Наименование расположения разметки
+            </summary>
+        </member>
+        <member name="P:TestZL.Models.Database.LocationMarkup.Syn">
+            <summary>
+            Синоним
+            </summary>
+        </member>
+        <member name="P:TestZL.Models.DTO.AnswerModel.FileName">
+            <summary>
+            имя файла
+            </summary>
+        </member>
+        <member name="P:TestZL.Models.DTO.AnswerModel.Answer">
+            <summary>
+            ответ
+            </summary>
+        </member>
+        <member name="P:TestZL.Models.DTO.LoadItemTable.Name">
+            <summary>
+            Наименование
+            </summary>
+        </member>
+        <member name="P:TestZL.Models.DTO.LoadItemTable.DateCreation">
+            <summary>
+            Дата создания
+            </summary>
+        </member>
+        <member name="M:TestZL.Models.Validators.LoadItemViewModelValidator.IsValidCaptcha(System.String)">
+            <summary>
+            Валидация на слово capcha
+            </summary>
+            <param name="inStr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TestZL.Models.Validators.LoadItemViewModelValidator.IsValidLatin(System.String)">
+            <summary>
+            Валидация на латиницу
+            </summary>
+            <param name="inStr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TestZL.Models.Validators.LoadItemViewModelValidator.IsValidChecked(System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Валидация на выбор одного из трех параметров
+            </summary>
+            <param name="IsContainsCyrillic"></param>
+            <param name="IsContainsLatin"></param>
+            <param name="IsContainsDigits"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TestZL.Models.Validators.LoadItemViewModelValidator.ValidateFile(TestZL.Models.ViewModel.LoadItemWithOutFile,Microsoft.AspNetCore.Http.IFormFile,FluentValidation.Validators.CustomContext)">
+            <summary>
+            Кастомная валидация загружаемого файла
+            </summary>
+            <param name="model"></param>
+            <param name="file"></param>
+            <param name="context"></param>
+        </member>
+        <member name="P:TestZL.Models.ViewModel.LoadItemViewModel.uploadedFile">
+            <summary>
+            файл
+            </summary>     
+        </member>
+        <member name="P:TestZL.Models.ViewModel.LoadItemWithOutFile.Name">
+            <summary>
+            Ниаменование
+            </summary>        
+        </member>
+        <member name="P:TestZL.Models.ViewModel.LoadItemWithOutFile.IsContainsCyrillic">
+            <summary>
+            Содержит кириллицу
+            </summary>
+        </member>
+        <member name="P:TestZL.Models.ViewModel.LoadItemWithOutFile.IsContainsLatin">
+            <summary>
+            Содержит латиницу
+            </summary>
+        </member>
+        <member name="P:TestZL.Models.ViewModel.LoadItemWithOutFile.IsContainsDigits">
+            <summary>
+            Содержит цифры
+            </summary>
+        </member>
+        <member name="P:TestZL.Models.ViewModel.LoadItemWithOutFile.IsContainsSpecialChars">
+            <summary>
+            содержит специальные символы
+            </summary>
+        </member>
+        <member name="P:TestZL.Models.ViewModel.LoadItemWithOutFile.IsCaseSensitivity">
+            <summary>
+            Чувствительность к регистру
+            </summary>
+        </member>
+        <member name="P:TestZL.Models.ViewModel.LoadItemWithOutFile.SelectedMarkupId">
+            <summary>
+            Расположение разметки
+            </summary>
+        </member>
+        <member name="P:TestZL.Models.ViewModel.LoadItemWithOutFile.TempFolder">
+            <summary>
+            Временная папка сохранения файла
+            </summary>
+        </member>
+        <member name="M:TestZL.Services.FileService.UploadFileAsync(System.String,Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            Загрузка файла в локальню папку
+            </summary>
+            <param name="SavePath"></param>
+            <param name="file"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TestZL.Services.FileService.CheckCreateFolder(System.String)">
+            <summary>Проверить наличие папки и создать при отсутствии</summary>
+            <param name="path">Полный путь к папке</param>
+        </member>
+        <member name="M:TestZL.Services.Interfaces.IDictService.GetMarkupsAsync">
+            <summary>
+            Получить справочник вариантов расположения разметки 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TestZL.Services.Interfaces.IFileService.UploadFileAsync(System.String,Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            Загрузка файла в локальню папку
+            </summary>
+            <param name="SavePath">путь сохранения</param>
+            <param name="file">объект IFormFile</param>
+            <returns>полный путь к сохраненому файлу</returns>
+        </member>
+        <member name="M:TestZL.Services.Interfaces.IFileService.DeleteDirectoryFileAsync(System.String)">
+            <summary>
+            Удаление директории с временным файлом
+            </summary>
+            <param name="FilePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TestZL.Services.Interfaces.IFileService.CopyFileAsync(System.String,System.String)">
+            <summary>
+            копирует файл
+            </summary>
+            <param name="FilePathFrom"></param>
+            <param name="FilePathTo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TestZL.Services.Interfaces.IFileService.GetPathToTempFileDirectory(System.String)">
+            <summary>
+            Возвращает полный путь к папке где будет сохранятся временный файл
+            </summary>
+            <param name="Tempfolder"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TestZL.Services.Interfaces.IFileService.GetPathToFileDirectory(System.String)">
+            <summary>
+            Возвращает полный путь к папке где будет хранится файл
+            </summary>
+            <param name="Tempfolder"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TestZL.Services.Interfaces.ILoadItemService.SaveNewItemAsync(TestZL.Models.ViewModel.LoadItemViewModel)">
+            <summary>
+            Сохранить новый элемент
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TestZL.Services.Interfaces.ILoadItemService.GetAllAsync">
+            <summary>
+            Получить все записи
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
